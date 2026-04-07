@@ -59,16 +59,18 @@ export default function RootLayout({
 
             
             <Link href="/about">
-              <div className="bg-gray-300 p-[16px] rounded-md">關於我</div>
+              <div className="bg-gray-300 p-[16px] rounded-md">About me</div>
             </Link>
 
-            <Link href="/hobby">
-              <div className="bg-gray-300 p-[16px] mt-2 rounded-md">我的興趣</div>
+            <Link href="/IT LAB">
+              <div className="bg-gray-300 p-[16px] mt-2 rounded-md">IT LAB</div>
             </Link>
 
 
-            <div className="bg-gray-300 p-[16px] mt-2 rounded-md">設計專案</div>
-            <div className="bg-gray-300 p-[16px] mt-2 rounded-md">程式專案</div>
+            <div className="bg-gray-300 p-[16px] mt-2 rounded-md">Photography</div>
+            <div className="bg-gray-300 p-[16px] mt-2 rounded-md">Graphic Design</div>
+            <div className="bg-gray-300 p-[16px] mt-2 rounded-md">DCT</div>
+
 
 
           </div>
