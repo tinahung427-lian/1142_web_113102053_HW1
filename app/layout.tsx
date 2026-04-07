@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Image from "next/image"
+import Image from "next/image";
 import Link from "next/link";
-
-
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,66 +29,70 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
-
-
-        <div className="flex h-full">
-
+      <body className="min-h-screen bg-black p-6">
+        <div className="flex gap-6 h-[calc(100vh-48px)]">
           {/* 左邊 */}
-          <div className="bg-white w-[320px] h-full p-4">
-
-
-            <div className="flex justify-center items-center w-full">
+          <div className="bg-gray-200 w-[320px] h-full p-4 rounded-[30px] overflow-y-auto">
+            <div className="flex justify-center items-center w-full mt-2">
               <div className="bg-gray-200 w-[80px] h-[80px] rounded-full overflow-hidden flex justify-center items-center">
                 <Image src="/cat.png" alt="cat" width={80} height={80} />
               </div>
             </div>
 
+            <div className="text-center mt-3 font-semibold text-lg">名字</div>
+            <div className="text-center text-gray-600 mb-4">簡介</div>
 
-            <div className="text-center">名字</div>
-            <div className="text-center">簡介</div>
-
-            <div className="flex gap-3 mt-2">
-              <a href="#" className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+            <div className="flex gap-3 mt-2 mb-4 justify-center">
+              <a
+                href="#"
+                className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center"
+              >
                 📘
               </a>
 
-              <a href="#" className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+              <a
+                href="#"
+                className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center"
+              >
                 📷
               </a>
 
-              <a href="#" className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+              <a
+                href="#"
+                className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center"
+              >
                 ✉️
               </a>
             </div>
 
-            
-            <Link href="/about">
-              <div className="bg-gray-300 p-[16px] rounded-md">About me</div>
-            </Link>
+            <div className="flex flex-col gap-3">
+              <Link href="/about" className="block bg-gray-300 p-8 rounded-2xl">
+                About me
+              </Link>
 
-            <Link href="/IT LAB">
-              <div className="bg-gray-300 p-[16px] mt-2 rounded-md">IT LAB</div>
-            </Link>
+              <Link href="/it-lab" className="block bg-gray-300 p-8 rounded-2xl">
+                IT LAB
+              </Link>
 
+              <Link href="/photography" className="block bg-gray-300 p-8 rounded-2xl">
+                Photography
+              </Link>
 
-            <div className="bg-gray-300 p-[16px] mt-2 rounded-md">Photography</div>
-            <div className="bg-gray-300 p-[16px] mt-2 rounded-md">Graphic Design</div>
-            <div className="bg-gray-300 p-[16px] mt-2 rounded-md">DCT</div>
+              <Link href="/graphic-design" className="block bg-gray-300 p-8 rounded-2xl">
+                Graphic Design
+              </Link>
 
-
-
+              <Link href="/dct" className="block bg-gray-300 p-8 rounded-2xl">
+                DCT
+              </Link>
+            </div>
           </div>
 
           {/* 右邊 */}
-          <div className="bg-gray-200 w-full h-full">
-
+          <div className="bg-gray-200 flex-1 h-full rounded-[30px] overflow-y-auto p-6">
             {children}
-
           </div>
-
         </div>
-
       </body>
     </html>
   );
