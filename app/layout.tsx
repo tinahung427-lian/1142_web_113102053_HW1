@@ -50,11 +50,18 @@ export default function RootLayout({
             <div className="text-center">名字</div>
             <div className="text-center">簡介</div>
 
-            <div className="flex gap-2">
-              {/* icons, links, images */}
-            
-              <div>社群連結</div>
-              <div>社群連結</div>
+            <div className="flex gap-3 mt-2">
+              <a href="#" className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+                📘
+              </a>
+
+              <a href="#" className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+                📷
+              </a>
+
+              <a href="#" className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center">
+                ✉️
+              </a>
             </div>
 
             
