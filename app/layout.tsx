@@ -35,14 +35,14 @@ export default function RootLayout({
         <div className="flex gap-6 h-[calc(100vh-48px)]">
           {/* 左邊 */}
           <div className="bg-[#d8f3fe] w-[320px] h-full p-4 rounded-l-[30px] rounded-r-none overflow-y-auto">
-            <div className="flex justify-center items-center w-full mt-2">
-              <div className="bg-gray-200 w-[80px] h-[80px] rounded-full overflow-hidden flex justify-center items-center">
-                <Image src="/DSCF1180.png" alt="profile" width={80} height={80} className="w-full h-full object-cover"/>
+            <div className="flex justify-center items-center w-full mt-4">
+              <div className="bg-gray-200 w-[100px] h-[100px] rounded-full overflow-hidden flex justify-center items-center">
+                <Image src="/park.PNG" alt="profile" width={80} height={80} className="w-full h-full object-cover"/>
               </div>
             </div>
 
             <div className="text-center mt-3 font-semibold text-lg">洪秀蓮</div>
-            <div className="text-center text-gray-600 mb-4">吃個花生，好事花生</div>
+            <div className="text-center text-gray-600 text-sm mt-2 mb-4">吃個花生，好事花生</div>
 
             <div className="flex gap-5 mt-2 mb-4 justify-center">
               <a
