@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,33 +37,33 @@ export default function RootLayout({
           <div className="bg-[#d8f3fe] w-[320px] h-full p-4 rounded-l-[30px] rounded-r-none overflow-y-auto">
             <div className="flex justify-center items-center w-full mt-2">
               <div className="bg-gray-200 w-[80px] h-[80px] rounded-full overflow-hidden flex justify-center items-center">
-                <Image src="/cat.png" alt="cat" width={80} height={80} />
+                <Image src="/DSCF1180.png" alt="profile" width={80} height={80} className="w-full h-full object-cover"/>
               </div>
             </div>
 
-            <div className="text-center mt-3 font-semibold text-lg">名字</div>
-            <div className="text-center text-gray-600 mb-4">簡介</div>
+            <div className="text-center mt-3 font-semibold text-lg">洪秀蓮</div>
+            <div className="text-center text-gray-600 mb-4">吃個花生，好事花生</div>
 
-            <div className="flex gap-3 mt-2 mb-4 justify-center">
+            <div className="flex gap-5 mt-2 mb-4 justify-center">
               <a
                 href="#"
-                className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center"
+                className="w-13 h-13 bg-white rounded-full flex items-center justify-center"
               >
-                📘
+                <FaFacebook className="text-2xl text-black" />
               </a>
 
               <a
                 href="#"
-                className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center"
+                className="w-13 h-13 bg-white rounded-full flex items-center justify-center"
               >
-                📷
+                <FaInstagram className="text-2xl text-black"/>
               </a>
 
               <a
                 href="#"
-                className="w-10 h-10 bg-gray-300 rounded-full flex items-center justify-center"
+                className="w-13 h-13 bg-white rounded-full flex items-center justify-center"
               >
-                ✉️
+                <MdEmail className="text-2xl text-black"/>
               </a>
             </div>
 
