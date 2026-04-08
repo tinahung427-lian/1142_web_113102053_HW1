@@ -32,7 +32,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-black p-6">
         <div className="flex gap-6 h-[calc(100vh-48px)]">
           {/* 左邊 */}
-          <div className="bg-gray-200 w-[320px] h-full p-4 rounded-[30px] overflow-y-auto">
+          <div className="bg-[#d8f3fe] w-[320px] h-full p-4 rounded-l-[30px] rounded-r-none overflow-y-auto">
             <div className="flex justify-center items-center w-full mt-2">
               <div className="bg-gray-200 w-[80px] h-[80px] rounded-full overflow-hidden flex justify-center items-center">
                 <Image src="/cat.png" alt="cat" width={80} height={80} />
@@ -66,30 +66,30 @@ export default function RootLayout({
             </div>
 
             <div className="flex flex-col gap-3">
-              <Link href="/about" className="block bg-gray-300 p-8 rounded-2xl">
-                About me
+              <Link href="/about" className="text-center block bg-white p-7 rounded-2xl font-bold text-xl tracking-wide hover:scale-105 transition">
+                About Me
               </Link>
 
-              <Link href="/it-lab" className="block bg-gray-300 p-8 rounded-2xl">
+              <Link href="/it-lab" className="text-center block bg-white p-7 rounded-2xl font-bold text-xl tracking-wide hover:scale-105 transition">
                 IT LAB
               </Link>
 
-              <Link href="/photography" className="block bg-gray-300 p-8 rounded-2xl">
+              <Link href="/photography" className="text-center block bg-white p-7 rounded-2xl font-bold text-xl tracking-wide hover:scale-105 transition">
                 Photography
               </Link>
 
-              <Link href="/graphic-design" className="block bg-gray-300 p-8 rounded-2xl">
+              <Link href="/graphic-design" className="text-center block bg-white p-7 rounded-2xl font-bold text-xl tracking-wide hover:scale-105 transition">
                 Graphic Design
               </Link>
 
-              <Link href="/dct" className="block bg-gray-300 p-8 rounded-2xl">
+              <Link href="/dct" className="text-center block bg-white p-7 rounded-2xl font-bold text-xl tracking-wide hover:scale-105 transition">
                 DCT
               </Link>
             </div>
           </div>
 
           {/* 右邊 */}
-          <div className="bg-gray-200 flex-1 h-full rounded-[30px] overflow-y-auto p-6">
+          <div className="bg-gray-200 flex-1 h-full rounded-l-[30px] rounded-r-none overflow-y-auto p-6">
             {children}
           </div>
         </div>
