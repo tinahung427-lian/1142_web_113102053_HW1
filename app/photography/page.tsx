@@ -6,14 +6,14 @@ export default function AboutPage() {
         <div className="relative h-full rounded-2xl overflow-hidden">
           <Image src="/portrait.JPG" alt="portrait" fill className="object-cover object-[40%_center]"/>
             {/* 文字 */}
-          <div className="absolute bottom-0 left-0 text-white text-5xl font-extrabold tracking-widest">PORTRAIT</div>
+          <div className="absolute -bottom-2.5 -left-1.5 text-white text-7xl font-extrabold tracking-normal">PORTRAIT</div>
 
         </div>
         
         <div className="relative h-full rounded-2xl overflow-hidden">
           <Image src="/scenery.JPG" alt="scenery" fill className="object-cover"/>
            {/* 文字 */}
-           <div className="absolute bottom-0 right-0 text-white text-5xl font-extrabold tracking-widest">SCENERY</div>
+           <div className="absolute -bottom-2.5 -right-2.5 text-white text-7xl font-extrabold tracking-normal">SCENERY</div>
         
         </div>
       </div>

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -13,6 +13,10 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const inter = Inter({
   subsets: ["latin"],
 });
 
@@ -34,11 +38,13 @@ export default function RootLayout({
       <body className="min-h-screen bg-black p-6">
         <div className="flex gap-6 h-[calc(100vh-48px)]">
           {/* 左邊 */}
-          <div className="bg-[#d8f3fe] w-[320px] h-full p-4 rounded-l-[20px] rounded-r-none overflow-y-auto">
+          <div className={`${inter.className} bg-[#d8f3fe] w-[320px] h-full p-4 rounded-l-[20px] rounded-r-none overflow-y-auto`}>
             <div className="flex justify-center items-center w-full mt-4">
-              <div className="bg-gray-200 w-[100px] h-[100px] rounded-full overflow-hidden flex justify-center items-center">
-                <Image src="/park.PNG" alt="profile" width={80} height={80} className="w-full h-full object-cover"/>
-              </div>
+              <Link href="/">
+                <div className="bg-gray-200 w-[100px] h-[100px] rounded-full overflow-hidden flex justify-center items-center">
+                  <Image src="/park.PNG" alt="profile" width={80} height={80} className="w-full h-full object-cover"/>
+                </div>
+              </Link>
             </div>
 
             <div className="text-center mt-3 font-semibold text-lg">洪秀蓮</div>
@@ -46,22 +52,28 @@ export default function RootLayout({
 
             <div className="flex gap-5 mt-2 mb-4 justify-center">
               <a
-                href="#"
-                className="w-13 h-13 bg-white rounded-full flex items-center justify-center"
+                href="https://www.facebook.com/share/1As9AWdQpq/?mibextid=wwXIfr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-13 h-13 bg-white rounded-full flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 <FaFacebook className="text-2xl text-black" />
               </a>
 
               <a
-                href="#"
-                className="w-13 h-13 bg-white rounded-full flex items-center justify-center"
+                href="https://www.instagram.com/hhliannn_____?igsh=MTduc3N0cnk3OXNzMg%3D%3D&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-13 h-13 bg-white rounded-full flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 <FaInstagram className="text-2xl text-black"/>
               </a>
 
               <a
-                href="#"
-                className="w-13 h-13 bg-white rounded-full flex items-center justify-center"
+                href="mailto:tinahung427@email.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-13 h-13 bg-white rounded-full flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 <MdEmail className="text-2xl text-black"/>
               </a>
