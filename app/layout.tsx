@@ -103,8 +103,8 @@ export default function RootLayout({
           </div>
 
           {/* 右邊 */}
-          <div className="bg-[#ffffff] flex-1 h-full rounded-[20px] overflow-hidden p-6 min-h-0">
-            <div className="h-full min-h-0 p-6">
+          <div className="bg-[#ffffff] flex-1 h-full rounded-[20px] overflow-hidden min-h-0">
+            <div className="h-full min-h-0">
             {children}
             </div>
           </div>
