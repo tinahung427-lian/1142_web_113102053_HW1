@@ -34,7 +34,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-black p-6">
         <div className="flex gap-6 h-[calc(100vh-48px)]">
           {/* 左邊 */}
-          <div className="bg-[#d8f3fe] w-[320px] h-full p-4 rounded-l-[30px] rounded-r-none overflow-y-auto">
+          <div className="bg-[#d8f3fe] w-[320px] h-full p-4 rounded-l-[20px] rounded-r-none overflow-y-auto">
             <div className="flex justify-center items-center w-full mt-4">
               <div className="bg-gray-200 w-[100px] h-[100px] rounded-full overflow-hidden flex justify-center items-center">
                 <Image src="/park.PNG" alt="profile" width={80} height={80} className="w-full h-full object-cover"/>
@@ -91,8 +91,10 @@ export default function RootLayout({
           </div>
 
           {/* 右邊 */}
-          <div className="bg-gray-200 flex-1 h-full rounded-l-[30px] rounded-r-none overflow-y-auto p-6">
+          <div className="bg-[#ffffff] flex-1 h-full rounded-[20px] overflow-hidden p-6 min-h-0">
+            <div className="h-full min-h-0 p-6">
             {children}
+            </div>
           </div>
         </div>
       </body>
