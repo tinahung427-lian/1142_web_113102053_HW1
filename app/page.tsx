@@ -1,23 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
-import GridDistortion from "@/components/GridDistortion";
+import GridDistortion from '@/components/GridDistortion';
 
 export default function Home() {
   return (
 
-    <main className="relative w-full h-full overflow-hidden">
+    <main className="relative w-full h-screen min-h-0 overflow-hidden">
 
-       {/* 圖片 */}
-       <div className="absolute inset-0 z-0">
-        <img
-          src="/page.JPG" alt="hero" className="block w-full h-full object-cover"/>
+    
+      <div className="relative w-full h-full">
+
+        <GridDistortion
+          imageSrc="/point.JPG"
+          grid={20}
+          mouse={0.1}
+          strength={0.15}
+          relaxation={0.9}
+          offsetY={0.5}
+          className="absolute inset-0"
+        />
       </div>
 
-        {/* 背景動畫 */}
-        <div className="absolute inset-0 z-10 opacity-30 pointer-events-none">
-          <GridDistortion />
-        </div>
-          
 
     </main>
   );
