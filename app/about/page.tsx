@@ -147,8 +147,39 @@ export default function AboutPage() {
         </div>
 
 
-        <div className="col-span-4 row-span-2 row-start-5 rounded-3xl bg-white flex items-center justify-center">
-          04
+        <div className="col-span-4 row-span-2 row-start-5 rounded-3xl bg-white p-3">
+
+          <p className="font-bold mb-4 ml-4">◾ Hobby</p>
+
+          {/* 圖片區 */}
+          <div className="flex gap-4 justify-center">
+
+            {/* 1 */}
+            <div className="w-[200px] aspect-square rounded-xl overflow-hidden bg-gray-100">
+              <img src="/draw.JPG" className="w-full h-full object-contain" />
+
+              <p className="absolute bottom-2 left-2 text-black text-sm font-bold">
+                畫畫
+              </p>
+            </div>
+
+            {/* 2 放大 */}
+            <div className="w-[200px] aspect-square rounded-xl overflow-hidden bg-gray-100">
+              <img src="/cat.JPG" className="w-full h-full object-cover scale-110 object-[center_20%]" />
+            </div>
+
+            {/* 3 */}
+            <div className="w-[200px] aspect-square rounded-xl overflow-hidden bg-gray-100">
+              <img src="/picnic.JPEG" className="w-full h-full object-contain" />
+            </div>
+
+            {/* 4 放大 */}
+            <div className="w-[200px] aspect-square rounded-xl overflow-hidden bg-gray-100">
+              <img src="/sweet.JPEG" className="w-full h-full object-cover scale-110 object-[center_10%]" />
+            </div>
+
+          </div>
+
         </div>
 
         
