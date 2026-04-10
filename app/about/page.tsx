@@ -132,15 +132,15 @@ export default function AboutPage() {
           <div className="absolute right-6 bottom-6 flex flex-col items-end gap-3 text-3xl text-slate-600 opacity-80">
             
             <div className="flex gap-2 mr-5">
-              <IoLogoFigma className="transition hover:-translate-y-1" />
-              <SiBlender className="transition hover:-translate-y-1" />
+              <IoLogoFigma className="transition hover:-translate-y-1 hover:shadow-xl" />
+              <SiBlender className="transition hover:-translate-y-1 hover:shadow-xl" />
               
             </div>
 
             <div className="flex gap-2">
-              <TbBrandAdobePhotoshop className="transition hover:-translate-y-1" />
-              <TbBrandAdobeIllustrator className="transition hover:-translate-y-1" />
-              <TbBrandAdobePremier className="transition hover:-translate-y-1" />
+              <TbBrandAdobePhotoshop className="transition hover:-translate-y-1 hover:shadow-xl" />
+              <TbBrandAdobeIllustrator className="transition hover:-translate-y-1 hover:shadow-xl" />
+              <TbBrandAdobePremier className="transition hover:-translate-y-1 hover:shadow-xl" />
             </div>
           </div>
 
@@ -154,8 +154,8 @@ export default function AboutPage() {
           {/* 圖片區 */}
           <div className="flex gap-4 justify-center">
 
-            {/* 1 */}
-            <div className="w-[200px] aspect-square rounded-xl overflow-hidden bg-gray-100 relative">
+            
+            <div className="w-[200px] aspect-square rounded-xl overflow-hidden bg-gray-100 relative transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
               <img src="/draw.JPG" className="w-full h-full object-contain" />
 
               <p className="absolute bottom-8 left-2 text-black text-sm font-bold">
@@ -167,8 +167,9 @@ export default function AboutPage() {
 
             </div>
 
-            {/* 2 放大 */}
-            <div className="w-[200px] aspect-square rounded-xl overflow-hidden bg-gray-100 relative">
+            
+
+            <div className="w-[200px] aspect-square rounded-xl overflow-hidden bg-gray-100 relative transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
               <img src="/cat.JPG" className="w-full h-full object-cover scale-110 object-[center_20%]" />
               
               <p className="absolute bottom-6 left-11 text-black text-sm font-bold">
@@ -176,8 +177,8 @@ export default function AboutPage() {
               </p>
             </div>
 
-            {/* 3 */}
-            <div className="w-[200px] aspect-square rounded-xl overflow-hidden bg-gray-100 relative">
+            
+            <div className="w-[200px] aspect-square rounded-xl overflow-hidden bg-gray-100 relative transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
               <img src="/picnic.JPEG" className="w-full h-full object-contain" />
 
               <p className="absolute bottom-4 left-11 text-white text-sm font-bold">
@@ -185,8 +186,8 @@ export default function AboutPage() {
               </p>
             </div>
 
-            {/* 4 放大 */}
-            <div className="w-[200px] aspect-square rounded-xl overflow-hidden bg-gray-100 relative">
+            
+            <div className="w-[200px] aspect-square rounded-xl overflow-hidden bg-gray-100 relative transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
               <img src="/sweet.JPEG" className="w-full h-full object-cover scale-110 object-[center_10%]" />
 
               <p className="absolute bottom-20 left-6 text-white text-sm font-bold">
