@@ -9,7 +9,7 @@ function PixelTransition({
   gridSize = 7,
   pixelColor = 'currentColor',
   animationStepDuration = 0.3,
-  aspectRatio = '100%',
+  aspectRatio = null,
   className = '',
   once = false,
   style = {}
@@ -22,7 +22,10 @@ function PixelTransition({
   const [isActive, setIsActive] = useState(false);
 
   const isTouchDevice =
-    'ontouchstart' in window || navigator.maxTouchPoints > 0 || window.matchMedia('(pointer: coarse)').matches;
+  typeof window !== 'undefined' &&
+  ('ontouchstart' in window ||
+    navigator.maxTouchPoints > 0 ||
+    window.matchMedia('(pointer: coarse)').matches);
 
   useEffect(() => {
     const pixelGridEl = pixelGridRef.current;
@@ -108,16 +111,11 @@ function PixelTransition({
     <div
       ref={containerRef}
       className={`
-        ${className}
-        bg-[#271E37]
-        text-white
-        rounded-[15px]
-        border-2
-        border-white
-        w-[300px]
-        max-w-full
         relative
+        w-full
+        h-full
         overflow-hidden
+        ${className}
       `}
       style={style}
       onMouseEnter={!isTouchDevice ? handleEnter : undefined}
@@ -125,9 +123,9 @@ function PixelTransition({
       onClick={isTouchDevice ? handleClick : undefined}
       onFocus={!isTouchDevice ? handleEnter : undefined}
       onBlur={!isTouchDevice ? handleLeave : undefined}
-      tabIndex={0}
-    >
-      <div style={{ paddingTop: aspectRatio }} />
+      tabIndex={0}>
+
+      {aspectRatio && <div style={{ paddingTop: aspectRatio }} />}
 
       <div className="absolute inset-0 w-full h-full" aria-hidden={isActive}>
         {firstContent}
@@ -137,12 +135,15 @@ function PixelTransition({
         ref={activeRef}
         className="absolute inset-0 w-full h-full z-[2]"
         style={{ display: 'none' }}
-        aria-hidden={!isActive}
-      >
+        aria-hidden={!isActive}>
         {secondContent}
       </div>
 
-      <div ref={pixelGridRef} className="absolute inset-0 w-full h-full pointer-events-none z-[3]" />
+      <div
+        ref={pixelGridRef}
+        className="absolute inset-0 w-full h-full pointer-events-none z-[3]"
+      />
+
     </div>
   );
 }
