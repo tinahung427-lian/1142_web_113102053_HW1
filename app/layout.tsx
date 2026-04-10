@@ -5,6 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { Lora } from 'next/font/google'
+
+const lora = Lora({
+  subsets: ['latin'],
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

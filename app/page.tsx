@@ -1,6 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import GridDistortion from '@/components/GridDistortion';
+import { Lora } from 'next/font/google'
+
+const lora = Lora({
+  subsets: ['latin'],
+})
 
 export default function Home() {
   return (
@@ -21,21 +26,21 @@ export default function Home() {
         />
       </div>
 
-      <div className="absolute top-[80%] left-[80%] text-white text-2xl font-semibold">
+      <div className={`absolute top-[80%] left-[83%] text-white text-2xl font-semibold ${lora.className}`}>
         HELLO
       </div>
 
       {/* About Me 連結 */}
       <a
         href="/about"
-        className="absolute z-10 text-white text-5xl font-bold
-                  hover:underline hover:scale-110 transition-all duration-300"
+        className={`absolute z-10 text-white text-5xl font-bold drop-shadow-lg
+                  hover:underline hover:scale-110 transition-all duration-300 ${lora.className}`}
         style={{ top: "30%", left: "38%"}}
       >
         About Me 
       </a>
 
-      <div className="absolute top-[65%] left-[5%] text-white text-xl font-semibold">
+      <div className={`absolute top-[65%] left-[5%] text-white text-xl font-semibold ${lora.className}`}>
         HUNG HSIU-LIAN 
       </div>
 
