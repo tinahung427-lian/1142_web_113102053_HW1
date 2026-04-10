@@ -21,6 +21,24 @@ export default function Home() {
         />
       </div>
 
+      <div className="absolute top-10 left-10 z-10 text-white text-4xl font-bold">
+        HELLO
+      </div>
+
+      {/* About Me 連結 */}
+      <a
+        href="/about"
+        className="absolute z-10 text-white text-xl font-bold
+                  hover:underline hover:scale-110 transition-all duration-300"
+        style={{ top: "40%", left: "50%"}}
+      >
+        About Me 
+      </a>
+
+      <div className="absolute top-[60%] left-[10%] text-white text-4xl font-semibold">
+        HUNG HSIU-LIAN
+      </div>
+
 
     </main>
   );
