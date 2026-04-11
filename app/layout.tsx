@@ -100,8 +100,8 @@ export default function RootLayout({
               <Link href="/dct" className="text-center block h-[80px] bg-white p-7 rounded-2xl font-bold text-xl tracking-wide hover:scale-105 transition">
                 DCT
               </Link>
-              <div className="rounded-2xl h-[80px] bg-white p-7 tracking-wide hover:scale-105 transition"></div>
-              <div className="rounded-2xl h-[80px] bg-white p-7 tracking-wide hover:scale-105 transition"></div>  
+              <div className="text-center rounded-2xl h-[80px] bg-white p-7 tracking-wide hover:scale-105 transition">(◍꒪꒳꒪◍)՞</div>
+              <div className="text-center rounded-2xl h-[80px] bg-white p-7 tracking-wide hover:scale-105 transition">(●´⌓`●)</div>  
 
             </div>
           </div>
