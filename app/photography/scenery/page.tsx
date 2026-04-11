@@ -115,18 +115,27 @@ const items = [
 
 export default function SceneryPage() {
     return (
-      <main className="h-full min-h-0 overflow-y-auto p-6 pb-40">
+      <main className="h-full min-h-0 overflow-y-auto p-6">
+        
+        <div className="mb-6 text-gray-500 text-sm leading-snug text-center tracking-wide">
+        透過攝影，記錄生活；透過圖片，傳遞故事<br />
+        我喜歡光影的變化帶出不同的情緒與氛圍
+      </div>
+
+
         <Masonry
-          items={items}
-          ease="power3.out"
-          duration={0.6}
-          stagger={0.05}
-          animateFrom="bottom"
-          scaleOnHover
-          hoverScale={0.95}
-          blurToFocus
-          colorShiftOnHover={false}
+        items={items}
+        ease="power3.out"
+        duration={0.6}
+        stagger={0.05}
+        animateFrom="bottom"
+        scaleOnHover
+        hoverScale={0.95}
+        blurToFocus
+        colorShiftOnHover={false}
         />
+        <div className="h-[320px]" />
+    
       </main>
     );
   }

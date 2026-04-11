@@ -3,16 +3,31 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 
 const useMedia = (queries, values, defaultValue) => {
-  const get = () => values[queries.findIndex(q => matchMedia(q).matches)] ?? defaultValue;
+  const getValue = () => {
+    if (typeof window === "undefined" || typeof window.matchMedia === "undefined") {
+      return defaultValue;
+    }
 
-  const [value, setValue] = useState(get);
+    const index = queries.findIndex((q) => window.matchMedia(q).matches);
+    return values[index] ?? defaultValue;
+  };
+
+  const [value, setValue] = useState(defaultValue);
 
   useEffect(() => {
-    const handler = () => setValue(get);
-    queries.forEach(q => matchMedia(q).addEventListener('change', handler));
-    return () => queries.forEach(q => matchMedia(q).removeEventListener('change', handler));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [queries]);
+    if (typeof window === "undefined" || typeof window.matchMedia === "undefined") return;
+
+    const handler = () => setValue(getValue());
+
+    handler();
+
+    const mediaQueries = queries.map((q) => window.matchMedia(q));
+    mediaQueries.forEach((mq) => mq.addEventListener("change", handler));
+
+    return () => {
+      mediaQueries.forEach((mq) => mq.removeEventListener("change", handler));
+    };
+  }, [queries, values, defaultValue]);
 
   return value;
 };
@@ -23,10 +38,12 @@ const useMeasure = () => {
 
   useLayoutEffect(() => {
     if (!ref.current) return;
+
     const ro = new ResizeObserver(([entry]) => {
       const { width, height } = entry.contentRect;
       setSize({ width, height });
     });
+
     ro.observe(ref.current);
     return () => ro.disconnect();
   }, []);
@@ -34,11 +51,11 @@ const useMeasure = () => {
   return [ref, size];
 };
 
-const preloadImages = async urls => {
+const preloadImages = async (urls) => {
   await Promise.all(
     urls.map(
-      src =>
-        new Promise(resolve => {
+      (src) =>
+        new Promise((resolve) => {
           const img = new Image();
           img.src = src;
           img.onload = img.onerror = () => resolve();
@@ -67,7 +84,7 @@ const Masonry = ({
   const [containerRef, { width }] = useMeasure();
   const [imagesReady, setImagesReady] = useState(false);
 
-  const getInitialPosition = item => {
+  const getInitialPosition = (item) => {
     const containerRect = containerRef.current?.getBoundingClientRect();
     if (!containerRect) return { x: item.x, y: item.y };
 
@@ -97,31 +114,38 @@ const Masonry = ({
   };
 
   useEffect(() => {
-    preloadImages(items.map(i => i.img)).then(() => setImagesReady(true));
+    preloadImages(items.map((i) => i.img)).then(() => setImagesReady(true));
   }, [items]);
 
-  const grid = useMemo(() => {
-    if (!width) return [];
+  const { grid, totalHeight } = useMemo(() => {
+    if (!width) return { grid: [], totalHeight: 0 };
+
     const colHeights = new Array(columns).fill(0);
     const gap = 16;
     const totalGaps = (columns - 1) * gap;
     const columnWidth = (width - totalGaps) / columns;
 
-    return items.map(child => {
+    const laidOutItems = items.map((child) => {
       const col = colHeights.indexOf(Math.min(...colHeights));
       const x = col * (columnWidth + gap);
       const height = child.height / 2;
       const y = colHeights[col];
 
       colHeights[col] += height + gap;
+
       return { ...child, x, y, w: columnWidth, h: height };
     });
+
+    return {
+      grid: laidOutItems,
+      totalHeight: Math.max(...colHeights, 0)
+    };
   }, [columns, items, width]);
 
   const hasMounted = useRef(false);
 
   useLayoutEffect(() => {
-    if (!imagesReady) return;
+    if (!imagesReady || !grid.length) return;
 
     grid.forEach((item, index) => {
       const selector = `[data-key="${item.id}"]`;
@@ -129,6 +153,7 @@ const Masonry = ({
 
       if (!hasMounted.current) {
         const start = getInitialPosition(item);
+
         gsap.fromTo(
           selector,
           {
@@ -159,7 +184,6 @@ const Masonry = ({
     });
 
     hasMounted.current = true;
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [grid, imagesReady, stagger, animateFrom, blurToFocus, duration, ease]);
 
   const handleMouseEnter = (id, element) => {
@@ -170,6 +194,7 @@ const Masonry = ({
         ease: 'power2.out'
       });
     }
+
     if (colorShiftOnHover) {
       const overlay = element.querySelector('.color-overlay');
       if (overlay) gsap.to(overlay, { opacity: 0.3, duration: 0.3 });
@@ -184,6 +209,7 @@ const Masonry = ({
         ease: 'power2.out'
       });
     }
+
     if (colorShiftOnHover) {
       const overlay = element.querySelector('.color-overlay');
       if (overlay) gsap.to(overlay, { opacity: 0, duration: 0.3 });
@@ -191,16 +217,20 @@ const Masonry = ({
   };
 
   return (
-    <div ref={containerRef} className="relative w-full h-full">
-      {grid.map(item => (
+    <div
+      ref={containerRef}
+      className="relative w-full"
+      style={{ height: `${totalHeight}px` }}
+    >
+      {grid.map((item) => (
         <div
           key={item.id}
           data-key={item.id}
           className="absolute box-content"
           style={{ willChange: 'transform, width, height, opacity' }}
-          onClick={() => window.open(item.url, '_blank', 'noopener')}
-          onMouseEnter={e => handleMouseEnter(item.id, e.currentTarget)}
-          onMouseLeave={e => handleMouseLeave(item.id, e.currentTarget)}
+          onClick={() => item.url && window.open(item.url, '_blank', 'noopener')}
+          onMouseEnter={(e) => handleMouseEnter(item.id, e.currentTarget)}
+          onMouseLeave={(e) => handleMouseLeave(item.id, e.currentTarget)}
         >
           <div
             className="relative w-full h-full bg-cover bg-center rounded-[10px] shadow-[0px_10px_50px_-10px_rgba(0,0,0,0.2)] uppercase text-[10px] leading-[10px]"
