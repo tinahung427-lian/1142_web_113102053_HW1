@@ -1,4 +1,5 @@
 import Masonry from '@/components/Masonry';
+import Link from "next/link";
 
 const items = [
     {
@@ -115,7 +116,14 @@ const items = [
 
 export default function SceneryPage() {
     return (
-      <main className="h-full min-h-0 overflow-y-auto p-6">
+      <main className="relative h-full min-h-0 overflow-y-auto p-6">
+
+        <Link
+            href="/photography"
+            className="absolute top-6 left-6 z-50 bg-white/70 backdrop-blur px-4 py-2 rounded-full text-gray-500 text-sm hover:scale-105 transition"
+            >
+            ← Back
+        </Link>
         
         <div className="mb-6 text-gray-500 text-sm leading-snug text-center tracking-wide">
         透過攝影，記錄生活；透過圖片，傳遞故事<br />
