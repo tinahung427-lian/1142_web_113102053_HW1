@@ -85,25 +85,24 @@ export default function RootLayout({
             </div>
 
             <div className="flex flex-col gap-3">
-              <Link href="/about" className="text-center block bg-white p-7 rounded-2xl font-bold text-xl tracking-wide hover:scale-105 transition">
+              <Link href="/about" className="text-center block h-[80px] bg-white p-7 rounded-2xl font-bold text-xl tracking-wide hover:scale-105 transition">
                 About Me
               </Link>
 
-              <Link href="/it-lab" className="text-center block bg-white p-7 rounded-2xl font-bold text-xl tracking-wide hover:scale-105 transition">
-                IT LAB
-              </Link>
-
-              <Link href="/photography" className="text-center block bg-white p-7 rounded-2xl font-bold text-xl tracking-wide hover:scale-105 transition">
+              <Link href="/photography" className="text-center block h-[80px] bg-white p-7 rounded-2xl font-bold text-xl tracking-wide hover:scale-105 transition">
                 Photography
               </Link>
 
-              <Link href="/graphic-design" className="text-center block bg-white p-7 rounded-2xl font-bold text-xl tracking-wide hover:scale-105 transition">
+              <Link href="/graphic-design" className="text-center block h-[80px] bg-white p-7 rounded-2xl font-bold text-xl tracking-wide hover:scale-105 transition">
                 Graphic Design
               </Link>
 
-              <Link href="/dct" className="text-center block bg-white p-7 rounded-2xl font-bold text-xl tracking-wide hover:scale-105 transition">
+              <Link href="/dct" className="text-center block h-[80px] bg-white p-7 rounded-2xl font-bold text-xl tracking-wide hover:scale-105 transition">
                 DCT
               </Link>
+              <div className="rounded-2xl h-[80px] bg-white p-7 tracking-wide hover:scale-105 transition"></div>
+              <div className="rounded-2xl h-[80px] bg-white p-7 tracking-wide hover:scale-105 transition"></div>  
+
             </div>
           </div>
 
