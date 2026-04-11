@@ -32,7 +32,7 @@ export default function Page() {
           target="_blank"
           className="col-span-2 h-[120px] bg-white rounded-3xl flex items-center justify-center"
         >
-          查看我的作品集 
+          點擊觀看作品集 
         </a>
 
       </div>
