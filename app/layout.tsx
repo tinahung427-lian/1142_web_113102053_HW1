@@ -47,7 +47,7 @@ export default function RootLayout({
             <div className="flex justify-center items-center w-full mt-4">
               <Link href="/">
                 <div className="bg-gray-200 w-[100px] h-[100px] rounded-full overflow-hidden flex justify-center items-center">
-                  <Image src="/park.PNG" alt="profile" width={80} height={80} className="w-full h-full object-cover"/>
+                  <Image src="/park.png" alt="profile" width={80} height={80} className="w-full h-full object-cover"/>
                 </div>
               </Link>
             </div>
