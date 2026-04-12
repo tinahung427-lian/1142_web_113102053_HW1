@@ -83,22 +83,9 @@ export default function Mobilemenu() {
       )}
 
       {!showIntro && (
-        <div className="sticky top-0 z-100 -mx-4 -mt-4 mb-2 shrink-0 bg-black px-4 pb-2 pt-[max(1rem,env(safe-area-inset-top,0px))] lg:hidden">
-          <header className="relative z-60 flex h-14 items-center justify-end rounded-2xl bg-[#d8f3fe] px-2 shadow-sm">
-            <button
-              type="button"
-              className="inline-flex size-11 items-center justify-center rounded-xl bg-white text-black shadow-sm transition hover:bg-white/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black/30"
-              aria-expanded={drawerOpen}
-              aria-controls="mobile-drawer"
-              aria-label={drawerOpen ? "關閉選單" : "開啟選單"}
-              onClick={() => setDrawerOpen((v) => !v)}
-            >
-              <HamburgerIcon open={drawerOpen} />
-            </button>
-          </header>
-
+        <>
           <div
-            className={`fixed inset-0 z-40 bg-black/45 transition-opacity duration-300 lg:hidden ${
+            className={`fixed inset-0 z-70 bg-black/45 transition-opacity duration-300 lg:hidden ${
               drawerOpen ? "opacity-100" : "pointer-events-none opacity-0"
             }`}
             aria-hidden={!drawerOpen}
@@ -107,7 +94,7 @@ export default function Mobilemenu() {
 
           <div
             id="mobile-drawer"
-            className={`fixed right-0 left-0 z-50 max-h-[min(85vh,calc(100dvh-5rem))] overflow-y-auto rounded-b-2xl bg-[#d8f3fe] px-4 pb-6 pt-2 shadow-xl transition-transform duration-300 ease-out lg:hidden top-[calc(max(1rem,env(safe-area-inset-top,0px))+3.5rem)] ${
+            className={`fixed right-0 left-0 z-75 max-h-[min(85vh,calc(100dvh-5rem))] overflow-y-auto rounded-b-3xl bg-[#d8f3fe] px-4 pb-6 pt-3 shadow-xl transition-transform duration-300 ease-out lg:hidden top-[calc(max(0.75rem,env(safe-area-inset-top,0px))+4rem)] ${
               drawerOpen ? "translate-y-0" : "-translate-y-full pointer-events-none"
             }`}
             role="dialog"
@@ -116,7 +103,20 @@ export default function Mobilemenu() {
           >
             <SidebarContent onNavigate={closeDrawer} />
           </div>
-        </div>
+
+          <button
+            type="button"
+            className="fixed right-4 top-[max(0.75rem,env(safe-area-inset-top,0.75rem))] z-80 flex size-14 items-center justify-center rounded-full bg-[#d8f3fe] text-black shadow-lg ring-2 ring-white/70 transition hover:brightness-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black/30 active:scale-95 lg:hidden"
+            aria-expanded={drawerOpen}
+            aria-controls="mobile-drawer"
+            aria-label={drawerOpen ? "關閉選單" : "開啟選單"}
+            onClick={() => setDrawerOpen((v) => !v)}
+          >
+            <span className="scale-90">
+              <HamburgerIcon open={drawerOpen} />
+            </span>
+          </button>
+        </>
       )}
     </>
   );
