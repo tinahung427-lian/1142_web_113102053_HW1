@@ -9,12 +9,12 @@ const items = [
     },
     {
       id: "2",
-      img: "/S5.JPG",
+      img: "/S5.jpg",
       height: 600,
     },
     {
       id: "3",
-      img: "/S3.JPG",
+      img: "/S3.jpg",
       height: 600,
     },
     {
@@ -24,22 +24,22 @@ const items = [
       },
       {
         id: "5",
-        img: "/S11.JPG",
+        img: "/S11.jpg",
         height: 350,
       },
       {
         id: "6",
-        img: "/S8.JPG",
+        img: "/S8.jpg",
         height: 250,
       },
       {
         id: "7",
-        img: "/S7.JPG",
+        img: "/S7.jpg",
         height: 550,
       },
       {
         id: "8",
-        img: "/S14.JPG",
+        img: "/S14.jpg",
         height: 550,
       },
       {
@@ -49,7 +49,7 @@ const items = [
       },
       {
         id: "10",
-        img: "/S15.JPG",
+        img: "/S15.jpg",
         height: 400,
       },
       {
@@ -64,12 +64,12 @@ const items = [
       },
       {
         id: "13",
-        img: "/S13.JPG",
+        img: "/S13.jpg",
         height: 300,
       },
       {
         id: "14",
-        img: "/S9.JPG",
+        img: "/S9.jpg",
         height: 350,
       },
       {
@@ -89,7 +89,7 @@ const items = [
       },
       {
         id: "18",
-        img: "/S6.JPG",
+        img: "/S6.jpg",
         height: 500,
       },
       {
