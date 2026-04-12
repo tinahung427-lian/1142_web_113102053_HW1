@@ -11,7 +11,7 @@ export default function AboutPage() {
             href="/photography/portrait"
             className="relative block h-full rounded-2xl overflow-hidden group">
 
-            <Image src="/portrait.JPG" alt="portrait" fill className="object-cover object-[40%_center]"/>
+            <Image src="/portrait.jpg" alt="portrait" fill className="object-cover object-[40%_center]"/>
                 {/* 文字 */}
             <div className="absolute -bottom-2.5 -left-1.5 text-white text-7xl font-extrabold tracking-normal">PORTRAIT</div>
           
@@ -22,7 +22,7 @@ export default function AboutPage() {
             href="/photography/scenery"
             className="relative block h-full rounded-2xl overflow-hidden group">
 
-            <Image src="/scenery.JPG" alt="scenery" fill className="object-cover"/>
+            <Image src="/scenery.jpg" alt="scenery" fill className="object-cover"/>
               {/* 文字 */}
             <div className="absolute -bottom-2.5 -right-2.5 text-white text-7xl font-extrabold tracking-normal">SCENERY</div>
 

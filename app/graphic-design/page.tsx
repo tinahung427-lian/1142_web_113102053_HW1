@@ -117,7 +117,7 @@ export default function AboutPage() {
               className="relative aspect-square rounded-3xl overflow-hidden bg-white group cursor-pointer"
             >
               <img
-                src="/pro_1.JPG"
+                src="/pro_1.jpg"
                 alt="作品六"
                 className="w-full h-full object-cover transition duration-300 group-hover:scale-110"
               />
@@ -137,7 +137,7 @@ export default function AboutPage() {
               className="relative aspect-square rounded-3xl overflow-hidden bg-white group cursor-pointer"
             >
               <img
-                src="/pro_2.JPG"
+                src="/pro_2.jpg"
                 alt="作品七"
                 className="w-full h-full object-cover transition duration-300 group-hover:scale-110"
               />
@@ -152,7 +152,7 @@ export default function AboutPage() {
               className="relative aspect-square rounded-3xl overflow-hidden bg-white group cursor-pointer"
             >
               <img
-                src="/pro_3.JPG"
+                src="/pro_3.jpg"
                 alt="作品八"
                 className="w-full h-full object-cover transition duration-300 group-hover:scale-110"
               />
@@ -167,7 +167,7 @@ export default function AboutPage() {
               className="relative aspect-square rounded-3xl overflow-hidden bg-white group cursor-pointer"
             >
               <img
-                src="/pro_4.JPG"
+                src="/pro_4.jpg"
                 alt="作品九"
                 className="w-full h-full object-cover transition duration-300 group-hover:scale-110"
               />
@@ -182,7 +182,7 @@ export default function AboutPage() {
               className="relative aspect-square rounded-3xl overflow-hidden bg-white group cursor-pointer"
             >
               <img
-                src="/pro_5.JPG"
+                src="/pro_5.jpg"
                 alt="作品十"
                 className="w-full h-full object-cover transition duration-300 group-hover:scale-110"
               />

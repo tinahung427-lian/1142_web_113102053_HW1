@@ -6,7 +6,7 @@ import Link from "next/link";
   const items = [
       {
         id: "1", 
-        img: "/P1.JPG", 
+        img: "/P1.jpg", 
         height: 420
       },
       {
@@ -16,18 +16,18 @@ import Link from "next/link";
       },
       {
         id: "3", 
-        img: "/P2.JPG", 
+        img: "/P2.jpg", 
         height: 390
       },
       {
         id: "4", 
-        img: "/P27.JPG", 
+        img: "/P27.jpg", 
         height: 580
         
       },
       {
         id: "5", 
-        img: "/P8.JPEG", 
+        img: "/P8.jpeg", 
         height: 360
       },
       {
@@ -37,22 +37,22 @@ import Link from "next/link";
       },
       {
         id: "7", 
-        img: "/P18.JPG", 
+        img: "/P18.jpg", 
         height: 380
       },
       {
         id: "8", 
-        img: "/P22.JPG", 
+        img: "/P22.jpg", 
         height: 610
       },
       {
         id: "9", 
-        img: "/P3.JPG", 
+        img: "/P3.jpg", 
         height: 560
       },
       {
         id: "10", 
-        img: "/P5.JPG", 
+        img: "/P5.jpg", 
         height: 500
       },
       {
@@ -72,12 +72,12 @@ import Link from "next/link";
       },
       {
         id: "14", 
-        img: "/P7.JPEG", 
+        img: "/P7.jpeg", 
         height: 620
       },
       {
         id: "15", 
-        img: "/P19.JPG", 
+        img: "/P19.jpg", 
         height: 500
       },
       {

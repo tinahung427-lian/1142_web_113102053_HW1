@@ -32,7 +32,7 @@ export default function AboutPage() {
           <PixelTransition
             firstContent={
               <img
-                src="/me.JPG"
+                src="/me.jpg"
                 alt="me!"
                 style={{ width: "100%", height: "100%", objectFit: "cover" }}
               />
@@ -156,7 +156,7 @@ export default function AboutPage() {
 
             
             <div className="w-[200px] aspect-square rounded-xl overflow-hidden bg-gray-100 relative transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-              <img src="/draw.JPG" className="w-full h-full object-contain" />
+              <img src="/draw.jpg" className="w-full h-full object-contain" />
 
               <p className="absolute bottom-8 left-2 text-black text-sm font-bold">
                 最近的興趣是...
@@ -170,7 +170,7 @@ export default function AboutPage() {
             
 
             <div className="w-[200px] aspect-square rounded-xl overflow-hidden bg-gray-100 relative transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-              <img src="/cat.JPG" className="w-full h-full object-cover scale-110 object-[center_20%]" />
+              <img src="/cat.jpg" className="w-full h-full object-cover scale-110 object-[center_20%]" />
               
               <p className="absolute bottom-6 left-11 text-black text-sm font-bold">
                 好喜歡卯咪(◍ˊㅿˋ◍)
@@ -179,7 +179,7 @@ export default function AboutPage() {
 
             
             <div className="w-[200px] aspect-square rounded-xl overflow-hidden bg-gray-100 relative transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-              <img src="/picnic.JPEG" className="w-full h-full object-contain" />
+              <img src="/picnic.jpeg" className="w-full h-full object-contain" />
 
               <p className="absolute bottom-4 left-11 text-white text-sm font-bold">
                 野餐！超適合放空
@@ -188,7 +188,7 @@ export default function AboutPage() {
 
             
             <div className="w-[200px] aspect-square rounded-xl overflow-hidden bg-gray-100 relative transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-              <img src="/sweet.JPEG" className="w-full h-full object-cover scale-110 object-[center_10%]" />
+              <img src="/sweet.jpeg" className="w-full h-full object-cover scale-110 object-[center_10%]" />
 
               <p className="absolute bottom-20 left-6 text-white text-sm font-bold">
                 美食探索也是必須的吧！

@@ -13,7 +13,7 @@ export default function Home() {
       {/* 背景 */}
       <div className="absolute inset-0">
         <GridDistortion
-          imageSrc="/point.JPG"
+          imageSrc="/point.jpg"
           grid={20}
           mouse={0.1}
           strength={0.15}

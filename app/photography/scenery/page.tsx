@@ -4,7 +4,7 @@ import Link from "next/link";
 const items = [
     {
       id: "1",
-      img: "/S2.JPG",
+      img: "/S2.jpg",
       height: 350,
     },
     {
@@ -19,7 +19,7 @@ const items = [
     },
     {
         id: "4",
-        img: "/S4.JPG",
+        img: "/S4.jpg",
         height: 550,
       },
       {
@@ -44,7 +44,7 @@ const items = [
       },
       {
         id: "9",
-        img: "/S10.JPG",
+        img: "/S10.jpg",
         height: 400,
       },
       {
@@ -54,12 +54,12 @@ const items = [
       },
       {
         id: "11",
-        img: "/S12.JPG",
+        img: "/S12.jpg",
         height: 500,
       },
       {
         id: "12",
-        img: "/S23.JPEG",
+        img: "/S23.jpeg",
         height: 500,
       },
       {
@@ -74,17 +74,17 @@ const items = [
       },
       {
         id: "15",
-        img: "/S20.JPG",
+        img: "/S20.jpg",
         height: 500,
       },
       {
         id: "16",
-        img: "/S21.JPG",
+        img: "/S21.jpg",
         height: 550,
       },
       {
         id: "17",
-        img: "/S24.JPEG",
+        img: "/S24.jpeg",
         height: 520,
       },
       {
@@ -94,22 +94,22 @@ const items = [
       },
       {
         id: "19",
-        img: "/S16.JPG",
+        img: "/S16.jpg",
         height: 500,
       },
       {
         id: "20",
-        img: "/S18.JPG",
+        img: "/S18.jpg",
         height: 320,
       },
       {
         id: "21",
-        img: "/S22.JPEG",
+        img: "/S22.jpeg",
         height: 320,
       },
       {
         id: "22",
-        img: "/S19.JPG",
+        img: "/S19.jpg",
         height: 320,
       },
 ];
