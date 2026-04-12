@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 
 export default function CardCarousel() {
-  const images = ["/ble.JPG", "/f.PNG", "/s.PNG", "/t.PNG"];
+  const images = ["/ble.jpg", "/f.png", "/s.png", "/t.png"];
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
