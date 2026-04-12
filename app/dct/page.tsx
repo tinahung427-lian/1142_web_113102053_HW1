@@ -10,7 +10,7 @@ export default function AboutPage() {
           
           <div className="w-[300px] h-[300px] rounded-2xl overflow-hidden relative shrink-0">
             <img
-              src="/fig.PNG"
+              src="/fig.png"
               alt="project"
               className="w-full h-full object-cover"
             />
@@ -42,7 +42,7 @@ export default function AboutPage() {
         <div className="bg-white rounded-2xl p-6 h-[350px] shrink-0 shadow flex gap-6">
           <div className="w-[300px] h-[300px] rounded-2xl overflow-hidden relative group">
             <img
-              src="/ble.JPG"
+              src="/ble.jpg"
               alt="project"
               className="w-full h-full object-cover object-bottom rounded-xl"
             />
