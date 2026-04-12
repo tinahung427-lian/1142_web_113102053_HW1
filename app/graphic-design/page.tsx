@@ -14,12 +14,12 @@ export default function AboutPage() {
             {/* 1 */}
             <div
               onClick={() => setSelectedImage("/Ai_1.jpg")}
-              className="relative aspect-square rounded-3xl overflow-hidden bg-white group cursor-pointer"
+              className="relative aspect-square rounded-3xl overflow-hidden bg-gray-200 group cursor-pointer"
             >
               <img
                 src="/Ai_1.jpg"
                 alt="作品一"
-                className="w-full h-full object-cover transition duration-300 group-hover:scale-110"
+                className="block w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition">
                 <p className="absolute inset-0 flex items-center justify-center text-white font-bold text-lg tracking-wide">
