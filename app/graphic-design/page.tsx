@@ -13,11 +13,11 @@ export default function AboutPage() {
             
             {/* 1 */}
             <div
-              onClick={() => setSelectedImage("/Ai_1.JPG")}
+              onClick={() => setSelectedImage("/Ai_1.jpg")}
               className="relative aspect-square rounded-3xl overflow-hidden bg-white group cursor-pointer"
             >
               <img
-                src="/Ai_1.JPG"
+                src="/Ai_1.jpg"
                 alt="作品一"
                 className="w-full h-full object-cover transition duration-300 group-hover:scale-110"
               />
@@ -33,11 +33,11 @@ export default function AboutPage() {
 
             {/* 2 */}
             <div
-              onClick={() => setSelectedImage("/Ai_2.JPG")}
+              onClick={() => setSelectedImage("/Ai_2.jpg")}
               className="relative aspect-square rounded-3xl overflow-hidden bg-white group cursor-pointer"
             >
               <img
-                src="/Ai_2.JPG"
+                src="/Ai_2.jpg"
                 alt="作品二"
                 className="w-full h-full object-cover transition duration-300 group-hover:scale-110"
               />
@@ -53,11 +53,11 @@ export default function AboutPage() {
 
             {/* 3 */}
             <div
-              onClick={() => setSelectedImage("/Ai_3.JPG")}
+              onClick={() => setSelectedImage("/Ai_3.jpg")}
               className="relative aspect-square rounded-3xl overflow-hidden bg-white group cursor-pointer"
             >
               <img
-                src="/Ai_3.JPG"
+                src="/Ai_3.jpg"
                 alt="作品三"
                 className="w-full h-full object-cover transition duration-300 group-hover:scale-110"
               />
@@ -73,11 +73,11 @@ export default function AboutPage() {
 
             {/* 4 */}
             <div
-              onClick={() => setSelectedImage("/Ai_4.JPG")}
+              onClick={() => setSelectedImage("/Ai_4.jpg")}
               className="relative aspect-square rounded-3xl overflow-hidden bg-white group cursor-pointer"
             >
               <img
-                src="/Ai_4.JPG"
+                src="/Ai_4.jpg"
                 alt="作品四"
                 className="w-full h-full object-cover transition duration-300 group-hover:scale-110"
               />
@@ -93,11 +93,11 @@ export default function AboutPage() {
 
             {/* 5 */}
             <div
-              onClick={() => setSelectedImage("/Ps_1.JPG")}
+              onClick={() => setSelectedImage("/Ps_1.jpg")}
               className="relative aspect-square rounded-3xl overflow-hidden bg-white group cursor-pointer"
             >
               <img
-                src="/Ps_1.JPG"
+                src="/Ps_1.jpg"
                 alt="作品五"
                 className="w-full h-full object-cover transition duration-300 group-hover:scale-110"
               />
