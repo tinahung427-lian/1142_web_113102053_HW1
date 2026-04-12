@@ -43,7 +43,7 @@ export default function Home() {
                       text-sm sm:text-base md:text-lg lg:text-xl 
                       font-semibold ${lora.className}`}
         >
-          HUNG HSIU-LIAN
+          HUNG HSIU-LIAN  YA
         </div>
 
         {/* HELLO（右下） */}
