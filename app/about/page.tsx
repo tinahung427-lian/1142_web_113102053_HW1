@@ -50,8 +50,8 @@ export default function AboutPage() {
           />
         </div>
 
-        <div className="order-2 min-w-0 rounded-3xl bg-white p-4 sm:p-6 lg:col-span-2 lg:row-span-2 lg:col-start-3 lg:row-start-1">
-          <div className="min-w-0 leading-relaxed">
+        <div className="order-2 min-w-0 overflow-x-auto overflow-y-hidden rounded-3xl bg-white p-4 sm:p-6 lg:col-span-2 lg:row-span-2 lg:col-start-3 lg:row-start-1">
+          <div className="min-w-[700px] leading-relaxed">
             <p className="mb-2 font-bold">◾ Education</p>
             <div className="mb-4 pl-3 sm:pl-5">
               <p>-國立政治大學 教育學系</p>

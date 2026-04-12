@@ -39,6 +39,7 @@ export default function SidebarContent({ onNavigate }: Props) {
           href="https://www.facebook.com/share/1As9AWdQpq/?mibextid=wwXIfr"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={onNavigate}
           className="size-13 min-h-11 min-w-11 bg-white rounded-full flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
         >
           <FaFacebook className="text-2xl text-black" />
@@ -48,6 +49,7 @@ export default function SidebarContent({ onNavigate }: Props) {
           href="https://www.instagram.com/hhliannn_____?igsh=MTduc3N0cnk3OXNzMg%3D%3D&utm_source=qr"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={onNavigate}
           className="size-13 min-h-11 min-w-11 bg-white rounded-full flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
         >
           <FaInstagram className="text-2xl text-black" />
@@ -57,6 +59,7 @@ export default function SidebarContent({ onNavigate }: Props) {
           href="mailto:tinahung427@email.com"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={onNavigate}
           className="size-13 min-h-11 min-w-11 bg-white rounded-full flex items-center justify-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
         >
           <MdEmail className="text-2xl text-black" />
