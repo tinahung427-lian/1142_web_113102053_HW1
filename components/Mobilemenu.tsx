@@ -26,11 +26,28 @@ function HamburgerIcon({ open }: { open: boolean }) {
 }
 
 export default function Mobilemenu() {
-  /** 首次進入：全螢幕選單；關閉或點連結後改為漢堡列 */
+  /** 首次進入：全螢幕選單；關閉或點連結後改為浮動圓鈕 */
   const [showIntro, setShowIntro] = useState(true);
   const [drawerOpen, setDrawerOpen] = useState(false);
 
-  const dismissIntro = useCallback(() => setShowIntro(false), []);
+  const dismissIntro = useCallback(() => {
+    try {
+      sessionStorage.setItem("mobileNavIntroDone", "1");
+    } catch {
+      /* ignore */
+    }
+    setShowIntro(false);
+  }, []);
+
+  useEffect(() => {
+    try {
+      if (sessionStorage.getItem("mobileNavIntroDone") === "1") {
+        setShowIntro(false);
+      }
+    } catch {
+      /* ignore */
+    }
+  }, []);
   const closeDrawer = useCallback(() => setDrawerOpen(false), []);
 
   useEffect(() => {
@@ -95,7 +112,9 @@ export default function Mobilemenu() {
           <div
             id="mobile-drawer"
             className={`fixed right-0 left-0 z-75 max-h-[min(85vh,calc(100dvh-5rem))] overflow-y-auto rounded-b-3xl bg-[#d8f3fe] px-4 pb-6 pt-3 shadow-xl transition-transform duration-300 ease-out lg:hidden top-[calc(max(0.75rem,env(safe-area-inset-top,0px))+4rem)] ${
-              drawerOpen ? "translate-y-0" : "-translate-y-full pointer-events-none"
+              drawerOpen
+                ? "translate-y-0 opacity-100"
+                : "pointer-events-none -translate-y-full opacity-0"
             }`}
             role="dialog"
             aria-modal="true"
@@ -106,7 +125,7 @@ export default function Mobilemenu() {
 
           <button
             type="button"
-            className="fixed right-4 top-[max(0.75rem,env(safe-area-inset-top,0.75rem))] z-80 flex size-14 items-center justify-center rounded-full bg-[#d8f3fe] text-black shadow-lg ring-2 ring-white/70 transition hover:brightness-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black/30 active:scale-95 lg:hidden"
+            className="fixed right-4 top-[max(0.75rem,env(safe-area-inset-top,0.75rem))] z-80 flex size-14 shrink-0 items-center justify-center rounded-full bg-[#d8f3fe] text-black shadow-[0_4px_18px_rgba(0,0,0,0.18)] transition hover:brightness-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black/30 active:scale-95 lg:hidden"
             aria-expanded={drawerOpen}
             aria-controls="mobile-drawer"
             aria-label={drawerOpen ? "關閉選單" : "開啟選單"}

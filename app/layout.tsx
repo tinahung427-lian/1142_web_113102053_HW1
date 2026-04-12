@@ -39,8 +39,11 @@ export default function RootLayout({
         <div className="flex min-h-0 flex-1 flex-col gap-4 lg:h-[calc(100vh-48px)] lg:flex-row lg:gap-6">
           <Menu interClassName={inter.className} />
 
-          <div className="bg-[#d8f3fe] flex min-h-0 flex-1 flex-col overflow-hidden rounded-[20px] lg:h-full">
-            <div className="min-h-0 flex-1">{children}</div>
+          <div className="flex min-h-0 flex-1 flex-col overflow-hidden rounded-[20px] bg-[#d8f3fe] lg:h-full">
+            {/* 手機：預留頂部空間，避免內容白塊與固定圓鈕連成一條「選單列」視覺 */}
+            <div className="min-h-0 flex-1 max-lg:pt-[calc(env(safe-area-inset-top,0px)+4.75rem)] lg:pt-0">
+              {children}
+            </div>
           </div>
         </div>
       </body>
